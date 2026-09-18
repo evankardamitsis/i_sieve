@@ -21,7 +21,7 @@ export default function WhatWeDo() {
       />
 
       {/* Sources marquee */}
-      <div className="overflow-hidden border-y border-line py-4">
+      <div className="marquee-wrap overflow-hidden border-y border-line py-4">
         <div className="marquee flex w-max gap-10 whitespace-nowrap font-mono text-[0.75rem] uppercase tracking-[0.16em] text-ink-3">
           {[...sources, ...sources].map((s, i) => (
             <span key={i} className="flex items-center gap-10">{s}<span className="h-1 w-1 rounded-full bg-coral" /></span>
@@ -94,8 +94,8 @@ export default function WhatWeDo() {
               ["Its address", "The URL of each item, so you can see any comment in its original context and check our findings yourself."],
               ["Its impact", "The Buzz Factor: a measure based on who links to the comment, whether it triggers further reaction, and the audience it reached."],
             ].map(([t, b], i) => (
-              <Reveal key={t} delay={i * 90} className="bg-ink p-8 md:p-10">
-                <h3 className="display text-3xl">{t}</h3>
+              <Reveal key={t} delay={i * 90} className="card-sweep bg-ink p-8 transition-colors duration-500 hover:bg-blue-deep md:p-10">
+                <h3 className="nudge display text-3xl">{t}</h3>
                 <p className="mt-6 leading-relaxed text-paper/70">{b}</p>
               </Reveal>
             ))}

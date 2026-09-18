@@ -102,8 +102,8 @@ export default function HowItWorks() {
               </p>
               <p className="eyebrow mt-8 text-paper/50">Calculated from</p>
               <ul className="mt-3 flex flex-wrap gap-2">
-                {buzzCues.map((c) => (
-                  <li key={c} className="rounded-full border border-paper/20 px-3 py-1 text-sm text-paper/80">{c}</li>
+                {buzzCues.map((c, i) => (
+                  <li key={c} style={{ "--d": `${200 + i * 60}ms` } as React.CSSProperties} className="pop rounded-full border border-paper/20 px-3 py-1 text-sm text-paper/80">{c}</li>
                 ))}
               </ul>
             </Reveal>
@@ -117,8 +117,8 @@ export default function HowItWorks() {
               </p>
               <p className="eyebrow mt-8 text-paper/50">Calculated from</p>
               <ul className="mt-3 flex flex-wrap gap-2">
-                {tubeCues.map((c) => (
-                  <li key={c} className="rounded-full border border-paper/20 px-3 py-1 text-sm text-paper/80">{c}</li>
+                {tubeCues.map((c, i) => (
+                  <li key={c} style={{ "--d": `${200 + i * 60}ms` } as React.CSSProperties} className="pop rounded-full border border-paper/20 px-3 py-1 text-sm text-paper/80">{c}</li>
                 ))}
               </ul>
             </Reveal>
@@ -150,8 +150,8 @@ export default function HowItWorks() {
               ["Verifiable results", "We deliver the exact data used by our classifiers. Clients can verify results and analyse the data further themselves."],
               ["Low maintenance", "The master ontology is built at startup; keeping it fresh and efficient is mainly a matter of tuning."],
             ].map(([t, b], i) => (
-              <Reveal key={t} delay={i * 60} className="bg-paper p-8">
-                <h3 className="display text-2xl">{t}</h3>
+              <Reveal key={t} delay={i * 60} className="card-sweep bg-paper p-8 transition-colors duration-500 hover:bg-paper-2">
+                <h3 className="nudge display text-2xl">{t}</h3>
                 <p className="mt-4 leading-relaxed text-ink-2">{b}</p>
               </Reveal>
             ))}

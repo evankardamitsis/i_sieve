@@ -5,7 +5,7 @@ export default function SentimentBar({
   return (
     <div>
       {label && <p className={`eyebrow mb-3 ${dark ? "text-paper/50" : ""}`}>{label}</p>}
-      <div className="flex h-3 w-full overflow-hidden rounded-full">
+      <div className="grow flex h-3 w-full overflow-hidden rounded-full">
         <div className="bg-mint" style={{ width: `${positive}%` }} />
         <div className={dark ? "bg-paper/25" : "bg-paper-3"} style={{ width: `${neutral}%` }} />
         <div className="bg-coral" style={{ width: `${negative}%` }} />

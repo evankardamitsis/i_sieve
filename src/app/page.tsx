@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import { Sieve } from "@/components/Brand";
 import SentimentBar from "@/components/SentimentBar";
 import SentimentField from "@/components/SentimentField";
+import CountUp from "@/components/CountUp";
 import { Container, Eyebrow } from "@/components/Section";
 import { audiences, caseStudy, channels, steps } from "@/lib/content";
 
@@ -40,8 +41,14 @@ export default function Home() {
             <Eyebrow>Sentiment analysis · Total exposure tracking</Eyebrow>
           </div>
           <div className="rise" style={{ animationDelay: "80ms" }}>
-            <h1 className="display mt-6 max-w-[14ch] text-[3.4rem] md:text-[6.4rem] lg:text-[8rem]">
-              What do people <em>really</em> think?
+            <h1 className="display mt-6 max-w-[14ch] text-[3.4rem] md:text-[6.4rem] lg:text-[8rem]" aria-label="What do people really think?">
+              {["What", "do", "people", "really", "think?"].map((w, i) => (
+                <span key={w} className="word" aria-hidden>
+                  <span style={{ "--d": `${120 + i * 70}ms` } as React.CSSProperties} className={w === "really" ? "text-blue" : ""}>
+                    {w}
+                  </span>
+                </span>
+              ))}
             </h1>
           </div>
           <div className="mt-10 grid gap-8 md:grid-cols-12 md:items-end">
@@ -105,13 +112,13 @@ export default function Home() {
               <p className="eyebrow mb-4">Live classification · campaign: “XYZ ad”</p>
               <ul className="divide-y divide-line border-y border-line">
                 {samples.map((s, i) => (
-                  <li key={i} className="grid gap-3 py-5 md:grid-cols-[1fr_auto] md:items-center">
+                  <li key={i} className="row-hover grid gap-3 py-5 md:grid-cols-[1fr_auto] md:items-center">
                     <p className={`text-[1.05rem] leading-snug ${s.tags.includes("irrelevant") ? "text-ink-3" : ""}`}>
                       “{s.text}”
                     </p>
                     <div className="flex gap-2">
-                      {s.tags.map((t) => (
-                        <span key={t} className={`rounded-full border px-2.5 py-1 font-mono text-[0.66rem] uppercase tracking-wider ${tagStyle[t]}`}>
+                      {s.tags.map((t, j) => (
+                        <span key={t} style={{ "--d": `${250 + i * 120 + j * 90}ms` } as React.CSSProperties} className={`pop rounded-full border px-2.5 py-1 font-mono text-[0.66rem] uppercase tracking-wider ${tagStyle[t]}`}>
                           {t}
                         </span>
                       ))}
@@ -149,9 +156,9 @@ export default function Home() {
 
           <div className="mt-16 grid gap-px bg-paper/15 md:grid-cols-4">
             {channels.map((c, i) => (
-              <Reveal key={c.key} delay={i * 90} className="group bg-ink p-8 transition-colors hover:bg-blue-deep md:p-10">
+              <Reveal key={c.key} delay={i * 90} className="card-sweep group bg-ink p-8 transition-colors duration-500 hover:bg-blue-deep md:p-10">
                 <span className="font-mono text-[0.7rem] text-paper/40">0{i + 1}</span>
-                <h3 className="display mt-6 text-3xl">{c.title}</h3>
+                <h3 className="nudge display mt-6 text-3xl">{c.title}</h3>
                 <p className="mt-2 text-sm text-paper/55">{c.tagline}</p>
                 <p className="mt-8 text-[0.95rem] leading-relaxed text-paper/80">{c.body}</p>
                 <p className="mt-6 border-t border-paper/15 pt-4 text-sm leading-relaxed text-paper/60">
@@ -174,7 +181,8 @@ export default function Home() {
           </Reveal>
           <div className="mt-16 grid gap-10 md:grid-cols-3 md:gap-8">
             {steps.map((s, i) => (
-              <Reveal key={s.n} delay={i * 110} className="border-t border-ink pt-6">
+              <Reveal key={s.n} delay={i * 110} className="relative pt-6">
+                <span className="draw absolute inset-x-0 top-0 h-px bg-ink" style={{ "--d": `${i * 110}ms` } as React.CSSProperties} />
                 <div className="flex items-baseline justify-between">
                   <span className="display text-5xl text-blue">{s.n}</span>
                   <span className="font-mono text-[0.7rem] uppercase tracking-wider text-ink-3">{s.time}</span>
@@ -218,7 +226,7 @@ export default function Home() {
                 ["Daily", "reporting once trained"],
               ].map(([v, l]) => (
                 <div key={v}>
-                  <p className="display text-3xl md:text-4xl">{v}</p>
+                  <p className="display text-3xl md:text-4xl"><CountUp value={v} /></p>
                   <p className="mt-2 text-xs leading-snug text-ink-3">{l}</p>
                 </div>
               ))}
@@ -245,7 +253,7 @@ export default function Home() {
                   <Reveal key={a.slug} as="li" delay={i * 60} className="border-b border-line">
                     <Link
                       href={`/who-we-work-for#${a.slug}`}
-                      className="group flex items-baseline justify-between gap-6 py-6 transition-colors hover:text-blue"
+                      className="row-hover group flex items-baseline justify-between gap-6 py-6 hover:text-blue"
                     >
                       <span className="display text-3xl md:text-4xl">{a.title}</span>
                       <span className="font-mono text-xs text-ink-3 transition-transform group-hover:translate-x-1">→</span>
@@ -272,7 +280,7 @@ export default function Home() {
             <Reveal delay={240} className="mt-10 grid grid-cols-3 gap-4 border-t border-paper/15 pt-6">
               {caseStudy.stats.map((s) => (
                 <div key={s.label}>
-                  <p className="display text-3xl md:text-4xl">{s.value}</p>
+                  <p className="display text-3xl md:text-4xl"><CountUp value={s.value} /></p>
                   <p className="mt-1 text-xs text-paper/50">{s.label}</p>
                 </div>
               ))}
@@ -326,7 +334,7 @@ export default function Home() {
             <Reveal delay={240} className="flex flex-col items-start gap-4 md:col-span-5 md:col-start-8 md:items-end">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-4 rounded-full bg-paper px-8 py-5 text-lg font-medium text-ink transition-all duration-300 hover:bg-white hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] md:text-xl"
+                className="btn group inline-flex items-center gap-4 rounded-full bg-paper px-8 py-5 text-lg font-medium text-ink hover:bg-white hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] md:text-xl"
               >
                 Send us your question
                 <span className="inline-block h-2 w-2 rounded-full bg-coral transition-transform duration-300 group-hover:translate-x-1.5" />

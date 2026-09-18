@@ -3,6 +3,7 @@ import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
 import { Sieve, Brandify } from "@/components/Brand";
 import SentimentBar from "@/components/SentimentBar";
+import CountUp from "@/components/CountUp";
 import { Container, Eyebrow, PageHero } from "@/components/Section";
 import { caseStudy } from "@/lib/content";
 
@@ -46,7 +47,7 @@ export default function About() {
                 ["2009", "Buzzsense launched: total exposure tracking across text, video, audio and print."],
                 ["Today", "i‑sieve technologies LIMITED, Dundalk, Ireland."],
               ].map(([y, t], i) => (
-                <Reveal key={y} as="li" delay={i * 80} className="grid grid-cols-[6rem_1fr] gap-4 border-b border-line py-5">
+                <Reveal key={y} as="li" delay={i * 80} className="row-hover grid grid-cols-[6rem_1fr] gap-4 border-b border-line py-5">
                   <span className="display text-2xl text-blue">{y}</span>
                   <span className="pt-1 leading-relaxed text-ink-2"><Brandify>{t}</Brandify></span>
                 </Reveal>
@@ -70,7 +71,7 @@ export default function About() {
           <div className="mt-16 grid gap-6 border-y border-paper/15 py-8 md:grid-cols-3">
             {caseStudy.stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 80}>
-                <p className="display text-5xl md:text-6xl">{s.value}</p>
+                <p className="display text-5xl md:text-6xl"><CountUp value={s.value} /></p>
                 <p className="mt-2 text-sm text-paper/60">{s.label}</p>
                 {s.note && <p className="text-xs text-paper/40">{s.note}</p>}
               </Reveal>
@@ -86,11 +87,11 @@ export default function About() {
             <Reveal delay={120}>
               <p className="eyebrow mb-4 text-paper/50">Share of company opinions on Twitter (@climatecamp)</p>
               <ul className="space-y-3">
-                {caseStudy.twitterShare.map((c) => (
+                {caseStudy.twitterShare.map((c, i) => (
                   <li key={c.name} className="grid grid-cols-[6rem_1fr_3rem] items-center gap-4 text-sm">
                     <span>{c.name}</span>
                     <span className="h-2 rounded-full bg-paper/15">
-                      <span className="block h-2 rounded-full bg-coral" style={{ width: `${c.pct}%` }} />
+                      <span className="grow block h-2 rounded-full bg-coral" style={{ width: `${c.pct}%`, "--d": `${150 + i * 90}ms` } as React.CSSProperties} />
                     </span>
                     <span className="text-right font-mono text-xs text-paper/60">{c.pct}%</span>
                   </li>

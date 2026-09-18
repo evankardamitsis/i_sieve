@@ -23,6 +23,7 @@ export function Mark({ className, size = 32, color = "currentColor", accent = "v
         return (
           <circle
             key={i}
+            className={isSignal ? "signal" : undefined}
             cx={d.x}
             cy={isSignal ? d.y + 4.5 : d.y}
             r={isSignal ? 3.1 : 2.6}

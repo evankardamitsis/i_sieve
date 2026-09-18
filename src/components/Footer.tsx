@@ -21,29 +21,29 @@ export default function Footer() {
           <div className="md:col-span-2 md:col-start-7">
             <p className="eyebrow mb-4 text-paper/50">Company</p>
             <ul className="space-y-2 text-sm text-paper/85">
-              <li><Link className="transition-colors hover:text-paper/60" href="/what-we-do">What we do</Link></li>
-              <li><Link className="transition-colors hover:text-paper/60" href="/how-it-works">How it works</Link></li>
-              <li><Link className="transition-colors hover:text-paper/60" href="/who-we-work-for">Who we work for</Link></li>
-              <li><Link className="transition-colors hover:text-paper/60" href="/about">About</Link></li>
-              <li><Link className="transition-colors hover:text-paper/60" href="/contact">Contact</Link></li>
+              <li><Link className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="/what-we-do">What we do</Link></li>
+              <li><Link className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="/how-it-works">How it works</Link></li>
+              <li><Link className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="/who-we-work-for">Who we work for</Link></li>
+              <li><Link className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="/about">About</Link></li>
+              <li><Link className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="/contact">Contact</Link></li>
             </ul>
           </div>
 
           <div className="md:col-span-2">
             <p className="eyebrow mb-4 text-paper/50">Products</p>
             <ul className="space-y-2 text-sm text-paper/85">
-              <li><Link className="transition-colors hover:text-paper/60" href="/what-we-do#buzzsense">Buzzsense</Link></li>
-              <li><Link className="transition-colors hover:text-paper/60" href="/how-it-works#buzzfactor">Buzzfactor</Link></li>
-              <li><Link className="transition-colors hover:text-paper/60" href="/how-it-works#tubefactor">Tubefactor</Link></li>
+              <li><Link className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="/what-we-do#buzzsense">Buzzsense</Link></li>
+              <li><Link className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="/how-it-works#buzzfactor">Buzzfactor</Link></li>
+              <li><Link className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="/how-it-works#tubefactor">Tubefactor</Link></li>
             </ul>
           </div>
 
           <div className="md:col-span-2">
             <p className="eyebrow mb-4 text-paper/50">Contact</p>
             <ul className="space-y-2 text-sm text-paper/85">
-              <li><a className="transition-colors hover:text-paper/60" href="mailto:info@isievetech.com">info@isievetech.com</a></li>
+              <li><a className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="mailto:info@isievetech.com">info@isievetech.com</a></li>
               <li>
-                <a className="transition-colors hover:text-paper/60" href="https://www.linkedin.com/company/i-sieve-technologies" target="_blank" rel="noreferrer">
+                <a className="inline-block transition-[color,transform] duration-300 hover:translate-x-1 hover:text-paper/60" href="https://www.linkedin.com/company/i-sieve-technologies" target="_blank" rel="noreferrer">
                   LinkedIn
                 </a>
               </li>

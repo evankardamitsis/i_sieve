@@ -17,7 +17,7 @@ export default function ContactForm() {
     window.location.href = `mailto:info@isievetech.com?subject=${subject}&body=${body}`;
   };
 
-  const field = "w-full border-b border-line bg-transparent py-3 text-lg outline-none transition-colors placeholder:text-ink-3 focus:border-ink";
+  const field = "field w-full border-b border-line bg-transparent py-3 text-lg outline-none placeholder:text-ink-3";
 
   return (
     <form onSubmit={onSubmit} className="space-y-8">
@@ -45,7 +45,7 @@ export default function ContactForm() {
                 type="button"
                 key={i}
                 onClick={() => toggle(i)}
-                className={`rounded-full border px-3.5 py-1.5 text-sm transition-colors ${on ? "border-ink bg-ink text-paper" : "border-line text-ink-2 hover:border-ink"}`}
+                className={`chip rounded-full border px-3.5 py-1.5 text-sm ${on ? "border-ink bg-ink text-paper" : "border-line text-ink-2 hover:border-ink"}`}
               >
                 {i}
               </button>
@@ -59,7 +59,7 @@ export default function ContactForm() {
       </label>
       <button
         type="submit"
-        className="group inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3.5 font-medium text-paper transition-colors hover:bg-blue"
+        className="btn group inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3.5 font-medium text-paper hover:bg-blue"
       >
         Send enquiry
         <span className="h-1.5 w-1.5 rounded-full bg-coral transition-transform group-hover:translate-x-1" />
