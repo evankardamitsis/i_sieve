@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "i-sieve dev", "runtimeExecutable": "npm", "runtimeArgs": ["run", "dev", "--prefix", "/Users/VKardamitsis/Projects/i_sieve", "--", "-p", "3101"], "port": 3101 }
+  ]
+}
