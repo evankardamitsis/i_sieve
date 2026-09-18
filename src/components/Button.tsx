@@ -20,7 +20,7 @@ export default function Button({ href, children, variant = "primary", className 
       <span>{children}</span>
       <span
         aria-hidden
-        className="inline-block h-1.5 w-1.5 rounded-full bg-coral transition-transform duration-300 group-hover:translate-x-1"
+        className="inline-block h-1.5 w-1.5 rounded-full bg-blue group-hover:bg-paper transition-transform duration-300 group-hover:translate-x-1"
       />
     </Link>
   );

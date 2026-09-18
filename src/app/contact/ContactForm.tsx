@@ -62,7 +62,7 @@ export default function ContactForm() {
         className="btn group inline-flex items-center gap-3 rounded-full bg-ink px-6 py-3.5 font-medium text-paper hover:bg-blue"
       >
         Send enquiry
-        <span className="h-1.5 w-1.5 rounded-full bg-coral transition-transform group-hover:translate-x-1" />
+        <span className="h-1.5 w-1.5 rounded-full bg-[#8fa3ff] transition-transform group-hover:translate-x-1" />
       </button>
       <p className="text-xs text-ink-3">Opens in your email client, addressed to info@isievetech.com.</p>
     </form>

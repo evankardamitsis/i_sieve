@@ -162,7 +162,7 @@ export default function Home() {
                 <p className="mt-2 text-sm text-paper/55">{c.tagline}</p>
                 <p className="mt-8 text-[0.95rem] leading-relaxed text-paper/80">{c.body}</p>
                 <p className="mt-6 border-t border-paper/15 pt-4 text-sm leading-relaxed text-paper/60">
-                  <span className="text-coral">Delivers</span> · {c.deliver}
+                  <span className="text-[#8fa3ff]">Delivers</span> · {c.deliver}
                 </p>
               </Reveal>
             ))}
@@ -294,7 +294,7 @@ export default function Home() {
               <SentimentBar dark label="Shell · Twitter" {...caseStudy.shellTwitter} />
             </Reveal>
             <Reveal delay={280}>
-              <blockquote className="border-l-2 border-coral pl-6">
+              <blockquote className="border-l-2 border-[#8fa3ff] pl-6">
                 <p className="display text-2xl leading-snug md:text-3xl">“{caseStudy.quotes[0].text}”</p>
                 <cite className="mt-4 block font-mono text-xs not-italic text-paper/50">{caseStudy.quotes[0].source}</cite>
               </blockquote>
@@ -337,7 +337,7 @@ export default function Home() {
                 className="btn group inline-flex items-center gap-4 rounded-full bg-paper px-8 py-5 text-lg font-medium text-ink hover:bg-white hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] md:text-xl"
               >
                 Send us your question
-                <span className="inline-block h-2 w-2 rounded-full bg-coral transition-transform duration-300 group-hover:translate-x-1.5" />
+                <span className="inline-block h-2 w-2 rounded-full bg-blue transition-transform duration-300 group-hover:translate-x-1.5" />
               </Link>
               <a href="mailto:info@isievetech.com" className="u-link text-paper/80 hover:text-paper">
                 or email info@isievetech.com

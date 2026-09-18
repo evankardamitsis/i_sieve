@@ -6,7 +6,7 @@ export function Container({ children, className = "" }: { children: React.ReactN
 export function Eyebrow({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
     <p className={`eyebrow flex items-center gap-3 ${className}`}>
-      <span className="dot-pulse inline-block h-1.5 w-1.5 rounded-full bg-coral" />
+      <span className="dot-pulse inline-block h-1.5 w-1.5 rounded-full bg-blue" />
       {children}
     </p>
   );

@@ -24,7 +24,7 @@ export default function WhatWeDo() {
       <div className="marquee-wrap overflow-hidden border-y border-line py-4">
         <div className="marquee flex w-max gap-10 whitespace-nowrap font-mono text-[0.75rem] uppercase tracking-[0.16em] text-ink-3">
           {[...sources, ...sources].map((s, i) => (
-            <span key={i} className="flex items-center gap-10">{s}<span className="h-1 w-1 rounded-full bg-coral" /></span>
+            <span key={i} className="flex items-center gap-10">{s}<span className="h-1 w-1 rounded-full bg-blue" /></span>
           ))}
         </div>
       </div>

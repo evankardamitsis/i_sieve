@@ -91,7 +91,7 @@ export default function About() {
                   <li key={c.name} className="grid grid-cols-[6rem_1fr_3rem] items-center gap-4 text-sm">
                     <span>{c.name}</span>
                     <span className="h-2 rounded-full bg-paper/15">
-                      <span className="grow block h-2 rounded-full bg-coral" style={{ width: `${c.pct}%`, "--d": `${150 + i * 90}ms` } as React.CSSProperties} />
+                      <span className="grow block h-2 rounded-full bg-[#8fa3ff]" style={{ width: `${c.pct}%`, "--d": `${150 + i * 90}ms` } as React.CSSProperties} />
                     </span>
                     <span className="text-right font-mono text-xs text-paper/60">{c.pct}%</span>
                   </li>
@@ -105,7 +105,7 @@ export default function About() {
 
           <div className="mt-20 grid gap-8 md:grid-cols-3">
             {caseStudy.quotes.map((q, i) => (
-              <Reveal key={q.source} delay={i * 90} className={`border-l-2 pl-6 ${q.tone === "negative" ? "border-coral" : "border-paper/30"}`}>
+              <Reveal key={q.source} delay={i * 90} className={`border-l-2 pl-6 ${"border-[#8fa3ff]"}`}>
                 <p className="display text-xl leading-snug md:text-2xl">“{q.text}”</p>
                 <cite className="mt-4 block font-mono text-xs not-italic text-paper/50">
                   {q.source} · <span className={q.tone === "negative" ? "text-coral" : ""}>{q.tone}</span>

@@ -68,7 +68,8 @@ body {
 }
 .bg-blue .display em,
 .bg-blue .display i {
-  color: #ffd3c6;
+  color: var(--paper);
+  opacity: 0.85;
 }
 
 .eyebrow {
