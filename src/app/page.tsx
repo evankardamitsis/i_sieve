@@ -36,7 +36,7 @@ export default function Home() {
       <section className="relative min-h-[100svh] overflow-hidden">
         <SentimentField className="absolute inset-0 h-full w-full" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-paper/70 via-transparent to-paper" />
-        <Container className="relative flex min-h-[100svh] flex-col justify-end pb-16 pt-40 md:pb-24">
+        <Container className="relative flex min-h-[100svh] flex-col justify-center pb-12 pt-28 md:justify-end md:pb-24 md:pt-40">
           <div className="rise">
             <Eyebrow>Sentiment analysis · Total exposure tracking</Eyebrow>
           </div>
