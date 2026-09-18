@@ -54,7 +54,7 @@ export default function Home() {
           <div className="mt-10 grid gap-8 md:grid-cols-12 md:items-end">
             <div className="rise md:col-span-6" style={{ animationDelay: "160ms" }}>
               <p className="max-w-xl text-lg leading-relaxed text-ink-2 md:text-xl">
-                <Sieve /> crawls the web — news, blogs, forums, social, video and audio — and finds
+                <Sieve /> crawls the web (news, blogs, forums, social, video and audio) and finds
                 exactly what people say about your company, your campaigns and your competitors.
                 Then we hand you the data.
               </p>
@@ -77,7 +77,7 @@ export default function Home() {
               className={`py-12 md:py-16 ${i < 2 ? "md:border-r md:border-line md:pr-10" : ""} ${i > 0 ? "md:pl-10 border-t border-line md:border-t-0" : ""}`}
             >
               <p className="display text-2xl md:text-[1.9rem] leading-tight">{item.q}</p>
-              <p className="mt-5 font-mono text-[0.78rem] uppercase tracking-[0.14em] text-blue">— {item.a}</p>
+              <p className="mt-5 font-mono text-[0.78rem] uppercase tracking-[0.14em] text-blue">{item.a}</p>
             </Reveal>
           ))}
         </Container>
@@ -96,7 +96,7 @@ export default function Home() {
             <Reveal delay={160}>
               <p className="mt-8 text-lg leading-relaxed text-ink-2">
                 We identify relevant comments made by news media and by people in blogs, micro‑blogs,
-                online video — in the stream itself and in the comments beneath it — discussion forums
+                online video (in the stream itself and in the comments beneath it), discussion forums
                 and public social networks. Sophisticated techniques extract what’s relevant to your
                 question and classify it as positive, negative, neutral or balanced. Everything
                 irrelevant is discarded.
@@ -127,7 +127,7 @@ export default function Home() {
                 ))}
               </ul>
               <p className="mt-4 text-sm text-ink-3">
-                The last one mentions the product but says nothing about the campaign — so it never reaches your report.
+                The last one mentions the product but says nothing about the campaign, so it never reaches your report.
               </p>
             </Reveal>
           </div>
@@ -209,7 +209,7 @@ export default function Home() {
           <div className="md:col-span-5 md:col-start-8">
             <Reveal delay={100}>
               <p className="text-lg leading-relaxed text-ink-2">
-                One of <Sieve />’s unique features: we deliver the exact data our classifiers used —
+                One of <Sieve />’s unique features: we deliver the exact data our classifiers used,
                 usually as a spreadsheet. The comment itself, its URL, and a measure of its impact
                 we call the <strong className="font-medium text-ink">Buzz Factor</strong>. Captions for
                 text, annotated proof images for video.

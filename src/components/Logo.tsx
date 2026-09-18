@@ -2,7 +2,7 @@ type MarkProps = { className?: string; size?: number; color?: string; accent?: s
 
 /**
  * The sieve mark: a perforated disc built from a dot grid,
- * with one dot — the signal — passing through in the accent colour.
+ * with one dot (the signal) passing through in the accent colour.
  */
 export function Mark({ className, size = 32, color = "currentColor", accent = "var(--blue)" }: MarkProps) {
   const dots: { x: number; y: number }[] = [];

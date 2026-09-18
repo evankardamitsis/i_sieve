@@ -27,7 +27,7 @@ export default function About() {
             <Reveal>
               <p>
                 Incorporated in late 2004 by four prominent researchers in the field, as a spin‑off of
-                NCSR “Demokritos” — the largest public research centre in Greece — <Sieve /> has developed a
+                NCSR “Demokritos”, the largest public research centre in Greece, <Sieve /> has developed a
                 suite of tools specifically targeted at online data identification, collection and semantic
                 analysis.
               </p>
@@ -80,9 +80,9 @@ export default function About() {
 
           <div className="mt-16 grid gap-16 md:grid-cols-2">
             <div className="space-y-10">
-              <Reveal><SentimentBar dark label="Web references — all companies" {...caseStudy.web} /></Reveal>
-              <Reveal delay={80}><SentimentBar dark label="Web references — Shell" {...caseStudy.shellWeb} /></Reveal>
-              <Reveal delay={160}><SentimentBar dark label="Twitter — Shell" {...caseStudy.shellTwitter} /></Reveal>
+              <Reveal><SentimentBar dark label="Web references · all companies" {...caseStudy.web} /></Reveal>
+              <Reveal delay={80}><SentimentBar dark label="Web references · Shell" {...caseStudy.shellWeb} /></Reveal>
+              <Reveal delay={160}><SentimentBar dark label="Twitter · Shell" {...caseStudy.shellTwitter} /></Reveal>
             </div>
             <Reveal delay={120}>
               <p className="eyebrow mb-4 text-paper/50">Share of company opinions on Twitter (@climatecamp)</p>
@@ -98,7 +98,7 @@ export default function About() {
                 ))}
               </ul>
               <p className="mt-6 text-sm leading-relaxed text-paper/60">
-                Where Shell was referenced on Twitter we saw 60% negative and 40% neutral — and 0% positive.
+                Where Shell was referenced on Twitter we saw 60% negative and 40% neutral, and 0% positive.
               </p>
             </Reveal>
           </div>

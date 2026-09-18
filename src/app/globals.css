@@ -50,7 +50,7 @@ body {
   color: var(--paper);
 }
 
-/* Display typography — same family as the logo, tight and confident */
+/* Display typography: same family as the logo, tight and confident */
 .display {
   font-family: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
   font-weight: 600;
@@ -156,7 +156,7 @@ body {
   .rise { animation: none; }
 }
 
-/* Brand name colouring — adapts to the section background */
+/* Brand name colouring, adapts to the section background */
 .brand {
   color: var(--blue);
   font-weight: 500;

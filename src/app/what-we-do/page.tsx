@@ -43,7 +43,7 @@ export default function WhatWeDo() {
               <p className="text-lg leading-relaxed text-ink-2">
                 Buzzsense is our online analytics service, providing total brand exposure monitoring to
                 advertising agencies, media planners and media companies. It implements innovative,
-                scientifically robust metrics — the <strong className="font-medium text-ink">buzzfactor</strong> for
+                scientifically robust metrics: the <strong className="font-medium text-ink">buzzfactor</strong> for
                 blogs, chat rooms and forums, the <strong className="font-medium text-ink">tubefactor</strong> for
                 YouTube clips.
               </p>
@@ -57,7 +57,7 @@ export default function WhatWeDo() {
         </Container>
       </section>
 
-      {/* Channels — deep */}
+      {/* Channels, deep dive */}
       <section className="border-t border-line">
         {channels.map((c, i) => (
           <div key={c.key} id={c.key} className="scroll-mt-24 border-b border-line">

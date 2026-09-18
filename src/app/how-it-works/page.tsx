@@ -19,7 +19,7 @@ export default function HowItWorks() {
       <PageHero
         eyebrow="How it works"
         title={<>We <em>teach</em> computers to answer your particular question.</>}
-        lede="This may sound like science fiction, but it really is what we do. Our software gives computers the ability to recognise features of text, images and video — and our human team shows them what to look for."
+        lede="This may sound like science fiction, but it really is what we do. Our software gives computers the ability to recognise features of text, images and video, and our human team shows them what to look for."
       />
 
       {/* Steps */}
@@ -54,7 +54,7 @@ export default function HowItWorks() {
           <div className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-ink-2">
             <Reveal delay={100}>
               <p>
-                Our team identifies examples of relevant comments that <Sieve /> computers then analyse —
+                Our team identifies examples of relevant comments that <Sieve /> computers then analyse,
                 literally learning how to distinguish relevant from irrelevant, positive from negative,
                 interesting from unimportant. Relevant comments are assigned to one or more clusters:
                 comments about the music on an ad, comments about the product’s effectiveness, and so on.
@@ -63,7 +63,7 @@ export default function HowItWorks() {
             <Reveal delay={160}>
               <p>
                 Sometimes the system finds resources that are clearly relevant but don’t fit any
-                pre‑defined cluster. The team is alerted and can define a new one — even if it isn’t what
+                pre‑defined cluster. The team is alerted and can define a new one, even if it isn’t what
                 was originally asked.
               </p>
             </Reveal>
@@ -73,7 +73,7 @@ export default function HowItWorks() {
                   Work on a painkiller aimed at lower‑back and arthritis pain revealed a huge cluster of
                   women in their mid‑30s using it for menstrual cramps.
                 </p>
-                <cite className="mt-4 block font-mono text-xs not-italic text-ink-3">Discovered by the ontology — not by the brief.</cite>
+                <cite className="mt-4 block font-mono text-xs not-italic text-ink-3">Discovered by the ontology, not the brief.</cite>
               </blockquote>
             </Reveal>
           </div>
@@ -97,7 +97,7 @@ export default function HowItWorks() {
                 During collection a huge number of items are identified. Some are mere mentions with no
                 opinion; others lie low in obscure corners of the web. We use every reference in building
                 overall buzz measures and trends, but we apply the buzzfactor to normalise the data and
-                select meaningful samples for deeper analysis. It estimates the size of the audience reached —
+                select meaningful samples for deeper analysis. It estimates the size of the audience reached,
                 and therefore the message’s influence.
               </p>
               <p className="eyebrow mt-8 text-paper/50">Calculated from</p>
@@ -127,10 +127,10 @@ export default function HowItWorks() {
           <Reveal delay={240} className="mt-20 grid gap-8 border-t border-paper/15 pt-10 md:grid-cols-12">
             <h3 className="display text-3xl md:col-span-4 md:text-4xl">Pinpointing influence</h3>
             <p className="leading-relaxed text-paper/75 md:col-span-7 md:col-start-6">
-              The higher the buzzfactor, the more impactful the resource — helping analysts rank sites,
+              The higher the buzzfactor, the more impactful the resource, helping analysts rank sites,
               identify discussion hotspots for deeper monitoring, and find the power‑users in blogs and forums
               of the domain. The higher the tubefactor, the more impactful the clip. Using graph theory we
-              derive special subgraphs — cliques — of these power‑users and obtain a solid group of
+              derive special subgraphs (cliques) of these power‑users and obtain a solid group of
               influencers, ready for marketers to engage.
             </p>
           </Reveal>
@@ -144,7 +144,7 @@ export default function HowItWorks() {
           <div className="mt-12 grid gap-px border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
             {[
               ["The web is our database", "Every project starts afresh, which shows in data quality, freshness and relevance. New sources are added as soon as they become available."],
-              ["Fine accuracy, with alerts", "The ontology approach allows fine accuracy — and content that passes the ontology but can’t be clustered alerts a human."],
+              ["Fine accuracy, with alerts", "The ontology approach allows fine accuracy, and content that passes the ontology but can’t be clustered alerts a human."],
               ["Terms users actually use", "Strengthening the ontology with concepts discussed by users helps marketing teams qualify issues they never knew existed."],
               ["Languages at minimal cost", "Professional services are needed only for the first few days to define the ontology, then for rudimentary checks at delivery."],
               ["Verifiable results", "We deliver the exact data used by our classifiers. Clients can verify results and analyse the data further themselves."],

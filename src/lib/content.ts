@@ -3,14 +3,14 @@ export const channels = [
     key: "text",
     title: "Online text",
     tagline: "Social and professional media, side by side.",
-    body: "We measure and analyse social media alongside professional online media such as news portals — tracking brands, products, campaigns and public events by the impact they have on the online community.",
+    body: "We measure and analyse social media alongside professional online media such as news portals, tracking brands, products, campaigns and public events by the impact they have on the online community.",
     deliver: "Sentiment polarity, plus the drivers behind positive and negative comment.",
   },
   {
     key: "video",
     title: "Video",
     tagline: "Every second your logo is on screen.",
-    body: "We analyse digital footage to identify brand exposure via sponsorship — sideboards, overlays and logos in sports coverage — or via product placement in TV and film.",
+    body: "We analyse digital footage to identify brand exposure via sponsorship (sideboards, overlays and logos in sports coverage) or via product placement in TV and film.",
     deliver: "Exposure in seconds (time‑in, time‑out) and screen location, with variable occlusion and logo‑size thresholds. Footage capture available on request.",
   },
   {
@@ -24,7 +24,7 @@ export const channels = [
     key: "print",
     title: "Print media",
     tagline: "Publications, digitised and measured.",
-    body: "We measure exposure in publications available online in their print form — free or by subscription — and can digitise print media for you.",
+    body: "We measure exposure in publications available online in their print form, free or by subscription, and can digitise print media for you.",
     deliver: "Sentiment and its drivers, publication metadata (page, journalist) and photo exposure: the size and location of your logo in every image.",
   },
 ] as const;
@@ -33,19 +33,19 @@ export const steps = [
   {
     n: "01",
     title: "Defining the search",
-    body: "You define the “category” in a standard brief. It can be wide — compact cars, horror movies — or narrow: the new Mini Cooper, a single film title. We run early probes on the web to augment the description, double‑check the findings with you, then our machine‑learning algorithms build an ontology for the category from both the brief and the content discovered.",
+    body: "You define the “category” in a standard brief. It can be wide (compact cars, horror movies) or narrow: the new Mini Cooper, a single film title. We run early probes on the web to augment the description, double‑check the findings with you, then our machine‑learning algorithms build an ontology for the category from both the brief and the content discovered.",
     time: "2 days – 1 week",
   },
   {
     n: "02",
     title: "Collecting & analysing",
-    body: "Our proprietary focused crawlers use the ontology to separate mentions from opinions across roughly half a million online resources. Content is processed, classified and analysed: we calculate clusters, measure sentiment polarity and identify sentiment drivers — which aspect of the brand, product or person drives positive or negative opinion. Results are normalised by the buzzfactor.",
+    body: "Our proprietary focused crawlers use the ontology to separate mentions from opinions across roughly half a million online resources. Content is processed, classified and analysed: we calculate clusters, measure sentiment polarity and identify sentiment drivers: which aspect of the brand, product or person drives positive or negative opinion. Results are normalised by the buzzfactor.",
     time: "Continuous",
   },
   {
     n: "03",
     title: "Reporting",
-    body: "An online dashboard with key volume and sentiment metrics — and the actual data underneath it. Every comment, its URL, its buzzfactor. Alongside the data we provide our own analysis and conclusions and, where requested, graphical representations of public sentiment.",
+    body: "An online dashboard with key volume and sentiment metrics, with the actual data underneath it. Every comment, its URL, its buzzfactor. Alongside the data we provide our own analysis and conclusions and, where requested, graphical representations of public sentiment.",
     time: "Daily, once trained",
   },
 ] as const;
@@ -55,13 +55,13 @@ export const audiences = [
     slug: "ad-agencies",
     title: "Ad agencies",
     lede: "“Half the money I spend on advertising is wasted; the trouble is, I don’t know which half.” Today, i‑sieve could tell John Wanamaker.",
-    body: "Our sentiment analysis finds out what people say about a given campaign — what they like, what they don’t, and how public perception of the product has shifted because of it. Experience has taught us to expect the unexpected: the public often fixes on an aspect that seems peripheral to the campaign itself, and it’s exactly this intelligence that lets agencies deliver future messages in terms that make sense to the target market.",
+    body: "Our sentiment analysis finds out what people say about a given campaign: what they like, what they don’t, and how public perception of the product has shifted because of it. Experience has taught us to expect the unexpected: the public often fixes on an aspect that seems peripheral to the campaign itself, and it’s exactly this intelligence that lets agencies deliver future messages in terms that make sense to the target market.",
   },
   {
     slug: "media",
     title: "Media organisations",
     lede: "When audiences are measured in millions, keeping track of their reaction is daunting. Surveys are expensive and only ever answer the question posed.",
-    body: "i‑sieve measures public reaction close to real time — once trained, we can deliver sentiment results daily. We pick up every relevant comment, positive, negative, neutral or unexpected, identifying key words, phrases and sentiment drivers. Because the system is automated it scales to large volumes of data. And it’s smart: we recognise opinion shapers versus followers, mainstream versus extreme, the considered versus the ill‑informed.",
+    body: "i‑sieve measures public reaction close to real time. Once trained, we can deliver sentiment results daily. We pick up every relevant comment, positive, negative, neutral or unexpected, identifying key words, phrases and sentiment drivers. Because the system is automated it scales to large volumes of data. And it’s smart: we recognise opinion shapers versus followers, mainstream versus extreme, the considered versus the ill‑informed.",
   },
   {
     slug: "brand-owners",

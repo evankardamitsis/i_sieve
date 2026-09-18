@@ -10,13 +10,13 @@ const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrai
 export const metadata: Metadata = {
   metadataBase: new URL("https://isievetech.com"),
   title: {
-    default: "i‑sieve technologies — Beyond impressions",
-    template: "%s — i‑sieve technologies",
+    default: "i‑sieve technologies · Beyond impressions",
+    template: "%s · i‑sieve technologies",
   },
   description:
-    "Sentiment analysis and total brand exposure tracking across text, video, audio and print. We find out what people really think about your company, your campaigns and your competitors — and deliver the data.",
+    "Sentiment analysis and total brand exposure tracking across text, video, audio and print. We find out what people really think about your company, your campaigns and your competitors, and deliver the data.",
   openGraph: {
-    title: "i‑sieve technologies — Beyond impressions",
+    title: "i‑sieve technologies · Beyond impressions",
     description: "Sentiment analysis and total exposure tracking for brands, agencies, media and policy makers.",
     type: "website",
   },

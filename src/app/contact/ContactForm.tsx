@@ -10,9 +10,9 @@ export default function ContactForm() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const f = new FormData(e.currentTarget);
-    const subject = encodeURIComponent(`Project enquiry — ${f.get("org") || f.get("name")}`);
+    const subject = encodeURIComponent(`Project enquiry: ${f.get("org") || f.get("name")}`);
     const body = encodeURIComponent(
-      `Name: ${f.get("name")}\nOrganisation: ${f.get("org")}\nEmail: ${f.get("email")}\nInterested in: ${interest.join(", ") || "—"}\n\nThe question we want answered:\n${f.get("question")}`,
+      `Name: ${f.get("name")}\nOrganisation: ${f.get("org")}\nEmail: ${f.get("email")}\nInterested in: ${interest.join(", ") || "none selected"}\n\nThe question we want answered:\n${f.get("question")}`,
     );
     window.location.href = `mailto:info@isievetech.com?subject=${subject}&body=${body}`;
   };

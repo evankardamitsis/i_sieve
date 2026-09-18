@@ -14,7 +14,7 @@ export default function Footer() {
             </p>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-paper/60">
               Sentiment analysis and total exposure tracking across text, video, audio and print.
-              We tell you what people really think — and give you the data to prove it.
+              We tell you what people really think, and give you the data to prove it.
             </p>
           </div>
 
