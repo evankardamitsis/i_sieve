@@ -35,26 +35,26 @@ export default function Home() {
         <SentimentField className="absolute inset-0 h-full w-full" />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-paper/70 via-transparent to-paper" />
         <Container className="relative flex min-h-[100svh] flex-col justify-end pb-16 pt-40 md:pb-24">
-          <Reveal>
+          <div className="rise">
             <Eyebrow>Sentiment analysis · Total exposure tracking</Eyebrow>
-          </Reveal>
-          <Reveal delay={80}>
+          </div>
+          <div className="rise" style={{ animationDelay: "80ms" }}>
             <h1 className="display mt-6 max-w-[14ch] text-[3.4rem] md:text-[6.4rem] lg:text-[8rem]">
               What do people <em>really</em> think?
             </h1>
-          </Reveal>
+          </div>
           <div className="mt-10 grid gap-8 md:grid-cols-12 md:items-end">
-            <Reveal delay={160} className="md:col-span-6">
+            <div className="rise md:col-span-6" style={{ animationDelay: "160ms" }}>
               <p className="max-w-xl text-lg leading-relaxed text-ink-2 md:text-xl">
                 i‑sieve crawls the web — news, blogs, forums, social, video and audio — and finds
                 exactly what people say about your company, your campaigns and your competitors.
                 Then we hand you the data.
               </p>
-            </Reveal>
-            <Reveal delay={240} className="flex flex-wrap gap-3 md:col-span-6 md:justify-end">
+            </div>
+            <div className="rise flex flex-wrap gap-3 md:col-span-6 md:justify-end" style={{ animationDelay: "240ms" }}>
               <Button href="/contact">Start a project</Button>
               <Button href="/how-it-works" variant="ghost">How it works</Button>
-            </Reveal>
+            </div>
           </div>
         </Container>
       </section>
