@@ -59,6 +59,17 @@ export default function Footer() {
         <div className="mt-16 flex flex-col justify-between gap-4 border-t border-paper/15 pt-6 text-xs text-paper/45 md:flex-row">
           <span>© {new Date().getFullYear()} <Sieve /> technologies LIMITED. All rights reserved.</span>
           <span>Est. 2004 · Spin‑off of NCSR “Demokritos” · Patented 2005</span>
+          <span>
+            Designed &amp; Developed by{" "}
+            <a
+              href="https://belowthefold.gr"
+              target="_blank"
+              rel="noreferrer"
+              className="text-paper/70 transition-colors hover:text-paper"
+            >
+              Below The Fold
+            </a>
+          </span>
         </div>
       </div>
     </footer>
