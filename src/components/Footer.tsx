@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-10">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Mark size={44} className="text-paper" />
+            <Mark size={44} className="text-paper" accent="#8fa3ff" />
             <p className="display mt-6 max-w-sm text-3xl md:text-4xl">
               Beyond <em>impressions</em>.
             </p>

@@ -2,7 +2,7 @@
 
 Colours
 - Blue (primary)  #1f3fbf
-- Coral (signal)  #d9583b
+- Blue light (signal on dark) #8fa3ff
 - Ink             #141412
 - Paper           #f4f1ea
 
@@ -10,7 +10,7 @@ Typeface: Figtree SemiBold (wordmark, converted to outlines).
 
 Files
 - isieve-mark-{blue,ink,paper}      — the perforated-disc mark, transparent background
-- isieve-icon-{blue,ink}-tile       — 1024px app icon / social avatar
+- isieve-icon-{paper,ink}-tile       — 1024px app icon / social avatar
 - isieve-logo-horizontal-light(-bg) — mark + wordmark for light backgrounds (with/without paper bg)
 - isieve-logo-horizontal-dark(-bg)  — for dark backgrounds
 - isieve-logo-horizontal-mono-*     — single-colour versions

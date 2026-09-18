@@ -4,7 +4,7 @@ type MarkProps = { className?: string; size?: number; color?: string; accent?: s
  * The sieve mark: a perforated disc built from a dot grid,
  * with one dot — the signal — passing through in the accent colour.
  */
-export function Mark({ className, size = 32, color = "currentColor", accent = "var(--coral)" }: MarkProps) {
+export function Mark({ className, size = 32, color = "currentColor", accent = "var(--blue)" }: MarkProps) {
   const dots: { x: number; y: number }[] = [];
   const step = 6.5;
   const c = 20;
@@ -37,7 +37,7 @@ export function Mark({ className, size = 32, color = "currentColor", accent = "v
 export function Wordmark({ className = "", light = false }: { className?: string; light?: boolean }) {
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <Mark size={34} className={light ? "text-paper" : "text-ink"} />
+      <Mark size={34} className={light ? "text-paper" : "text-ink"} accent={light ? "#8fa3ff" : "var(--blue)"} />
       <span className="flex items-baseline gap-2">
         <span className={`font-sans text-[1.25rem] font-semibold leading-none tracking-[-0.03em] ${light ? "text-paper" : "text-blue"}`}>
           i‑sieve
