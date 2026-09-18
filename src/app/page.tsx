@@ -298,23 +298,43 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden py-28 md:py-40">
-        <div className="mesh mesh-fade absolute inset-0 text-ink" aria-hidden />
-        <Container className="relative text-center">
+      <section className="relative overflow-hidden bg-blue py-28 text-paper md:py-44">
+        <div className="mesh mesh-fade absolute inset-0 text-paper" aria-hidden />
+        <Container className="relative">
           <Reveal>
-            <h2 className="display mx-auto max-w-4xl text-5xl md:text-7xl">
+            <p className="eyebrow text-paper/60">Start here</p>
+          </Reveal>
+          <Reveal delay={80}>
+            <h2 className="display mt-6 max-w-[12ch] text-[3.2rem] leading-[0.95] md:text-[6rem] lg:text-[7.5rem]">
               Find out which half is <em>wasted</em>.
             </h2>
           </Reveal>
-          <Reveal delay={120}>
-            <p className="mx-auto mt-8 max-w-xl text-lg text-ink-2">
-              Tell us the question you want answered. We’ll tell you how we’d train the system, and what it would cost to keep listening.
-            </p>
-          </Reveal>
-          <Reveal delay={200} className="mt-10 flex justify-center gap-3">
-            <Button href="/contact">Talk to us</Button>
-            <Button href="mailto:info@isievetech.com" variant="ghost">info@isievetech.com</Button>
-          </Reveal>
+          <div className="mt-14 grid gap-10 md:grid-cols-12 md:items-end">
+            <Reveal delay={160} className="md:col-span-6">
+              <p className="max-w-xl text-lg leading-relaxed text-paper/85 md:text-xl">
+                Send us one question about your brand, campaign or issue. Within two working days
+                you’ll have a proposal: how we’d train the system, when the first data lands, and
+                what it costs to keep listening.
+              </p>
+              <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-2 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-paper/60">
+                <li>No obligation</li>
+                <li>Answer in 2 working days</li>
+                <li>You keep the data</li>
+              </ul>
+            </Reveal>
+            <Reveal delay={240} className="flex flex-col items-start gap-4 md:col-span-5 md:col-start-8 md:items-end">
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-4 rounded-full bg-paper px-8 py-5 text-lg font-medium text-ink transition-all duration-300 hover:bg-white hover:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] md:text-xl"
+              >
+                Send us your question
+                <span className="inline-block h-2 w-2 rounded-full bg-coral transition-transform duration-300 group-hover:translate-x-1.5" />
+              </Link>
+              <a href="mailto:info@isievetech.com" className="u-link text-paper/80 hover:text-paper">
+                or email info@isievetech.com
+              </a>
+            </Reveal>
+          </div>
         </Container>
       </section>
     </>
