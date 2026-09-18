@@ -28,7 +28,7 @@
   --color-coral: var(--coral);
   --color-mint: var(--mint);
   --color-amber: var(--amber);
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-figtree);
   --font-sans: var(--font-figtree);
   --font-mono: var(--font-jetbrains);
 }
@@ -50,18 +50,25 @@ body {
   color: var(--paper);
 }
 
-/* Display typography */
+/* Display typography — same family as the logo, tight and confident */
 .display {
-  font-family: var(--font-fraunces), Georgia, serif;
-  font-variation-settings: "opsz" 144, "SOFT" 30, "WONK" 0;
-  letter-spacing: -0.025em;
-  line-height: 0.98;
-  font-weight: 400;
+  font-family: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
 }
 .display em,
 .display i {
-  font-style: italic;
-  font-variation-settings: "opsz" 144, "SOFT" 60, "WONK" 1;
+  font-style: normal;
+  color: var(--blue);
+}
+.bg-ink .display em,
+.bg-ink .display i {
+  color: #8fa3ff;
+}
+.bg-blue .display em,
+.bg-blue .display i {
+  color: #ffd3c6;
 }
 
 .eyebrow {
@@ -146,4 +153,16 @@ body {
 }
 @media (prefers-reduced-motion: reduce) {
   .rise { animation: none; }
+}
+
+/* Brand name colouring — adapts to the section background */
+.brand {
+  color: var(--blue);
+  font-weight: 500;
+}
+.bg-ink .brand {
+  color: #8fa3ff;
+}
+.bg-blue .brand {
+  color: var(--paper);
 }

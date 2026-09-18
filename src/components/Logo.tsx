@@ -1,47 +1,46 @@
-type Props = { className?: string; size?: number; color?: string };
+type MarkProps = { className?: string; size?: number; color?: string; accent?: string };
 
-/** The sieve mark: a mesh disc, noise above it, signal passing through below. */
-export function Mark({ className, size = 36, color = "currentColor" }: Props) {
+/**
+ * The sieve mark: a perforated disc built from a dot grid,
+ * with one dot — the signal — passing through in the accent colour.
+ */
+export function Mark({ className, size = 32, color = "currentColor", accent = "var(--coral)" }: MarkProps) {
+  const dots: { x: number; y: number }[] = [];
+  const step = 6.5;
+  const c = 20;
+  const r = 14.2;
+  for (let i = -2; i <= 2; i++) {
+    for (let j = -2; j <= 2; j++) {
+      const x = c + i * step;
+      const y = c + j * step;
+      if (Math.hypot(x - c, y - c) <= r) dots.push({ x, y });
+    }
+  }
   return (
-    <svg
-      className={className}
-      width={size}
-      height={size}
-      viewBox="0 0 40 40"
-      fill="none"
-      aria-hidden="true"
-    >
-      {/* mesh disc */}
-      <circle cx="20" cy="17" r="13" stroke={color} strokeWidth="1.6" />
-      <g stroke={color} strokeWidth="0.9" opacity="0.55">
-        <line x1="7.5" y1="12" x2="32.5" y2="12" />
-        <line x1="7" y1="17" x2="33" y2="17" />
-        <line x1="7.5" y1="22" x2="32.5" y2="22" />
-        <line x1="15" y1="4.9" x2="15" y2="29.1" />
-        <line x1="20" y1="4" x2="20" y2="30" />
-        <line x1="25" y1="4.9" x2="25" y2="29.1" />
-      </g>
-      {/* noise caught on the mesh */}
-      <g fill={color}>
-        <circle cx="12.5" cy="14.5" r="1.6" />
-        <circle cx="22.5" cy="9.5" r="1.4" />
-        <circle cx="27.5" cy="19.5" r="1.7" />
-        <circle cx="17.5" cy="24.5" r="1.3" />
-      </g>
-      {/* the signal that passes through */}
-      <circle cx="20" cy="36" r="2.6" fill="var(--coral)" />
+    <svg className={className} width={size} height={size} viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      {dots.map((d, i) => {
+        const isSignal = d.x === c && d.y === c + step * 2;
+        return (
+          <circle
+            key={i}
+            cx={d.x}
+            cy={isSignal ? d.y + 4.5 : d.y}
+            r={isSignal ? 3.1 : 2.6}
+            fill={isSignal ? accent : color}
+          />
+        );
+      })}
     </svg>
   );
 }
 
-export function Wordmark({ className }: { className?: string }) {
+export function Wordmark({ className = "", light = false }: { className?: string; light?: boolean }) {
   return (
-    <span className={`inline-flex items-center gap-2.5 ${className ?? ""}`}>
-      <Mark size={30} />
-      <span className="display text-[1.35rem] leading-none tracking-tight">
-        i‑sieve
-        <span className="ml-1.5 font-sans text-[0.62rem] uppercase tracking-[0.18em] text-ink-3 align-middle">
-          technologies
+    <span className={`inline-flex items-center gap-2.5 ${className}`}>
+      <Mark size={34} className={light ? "text-paper" : "text-ink"} />
+      <span className="flex items-baseline gap-2">
+        <span className={`font-sans text-[1.25rem] font-semibold leading-none tracking-[-0.03em] ${light ? "text-paper" : "text-blue"}`}>
+          i‑sieve
         </span>
       </span>
     </span>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Sieve } from "@/components/Brand";
 import { Mark } from "./Logo";
 
 export default function Footer() {
@@ -42,13 +43,13 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-paper/85">
               <li><a className="transition-colors hover:text-paper/60" href="mailto:info@isievetech.com">info@isievetech.com</a></li>
               <li>
-                <a className="transition-colors hover:text-paper/60" href="https://www.linkedin.com/company/isievetech" target="_blank" rel="noreferrer">
+                <a className="transition-colors hover:text-paper/60" href="https://www.linkedin.com/company/i-sieve-technologies" target="_blank" rel="noreferrer">
                   LinkedIn
                 </a>
               </li>
             </ul>
             <address className="mt-6 text-xs not-italic leading-relaxed text-paper/50">
-              i‑sieve technologies LIMITED<br />
+              <Sieve /> technologies LIMITED<br />
               1 Francis St, Dundalk<br />
               Louth A91 XK38, Ireland
             </address>
@@ -56,7 +57,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col justify-between gap-4 border-t border-paper/15 pt-6 text-xs text-paper/45 md:flex-row">
-          <span>© {new Date().getFullYear()} i‑sieve technologies LIMITED. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} <Sieve /> technologies LIMITED. All rights reserved.</span>
           <span>Est. 2004 · Spin‑off of NCSR “Demokritos” · Patented 2005</span>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
+import { Sieve } from "@/components/Brand";
 import { Container, Eyebrow, PageHero } from "@/components/Section";
 import { steps } from "@/lib/content";
 
@@ -53,7 +54,7 @@ export default function HowItWorks() {
           <div className="md:col-span-6 md:col-start-7 space-y-6 text-lg leading-relaxed text-ink-2">
             <Reveal delay={100}>
               <p>
-                Our team identifies examples of relevant comments that i‑sieve computers then analyse —
+                Our team identifies examples of relevant comments that <Sieve /> computers then analyse —
                 literally learning how to distinguish relevant from irrelevant, positive from negative,
                 interesting from unimportant. Relevant comments are assigned to one or more clusters:
                 comments about the music on an ad, comments about the product’s effectiveness, and so on.

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
+import { Sieve } from "@/components/Brand";
 import SentimentBar from "@/components/SentimentBar";
 import SentimentField from "@/components/SentimentField";
 import { Container, Eyebrow } from "@/components/Section";
@@ -46,7 +47,7 @@ export default function Home() {
           <div className="mt-10 grid gap-8 md:grid-cols-12 md:items-end">
             <div className="rise md:col-span-6" style={{ animationDelay: "160ms" }}>
               <p className="max-w-xl text-lg leading-relaxed text-ink-2 md:text-xl">
-                i‑sieve crawls the web — news, blogs, forums, social, video and audio — and finds
+                <Sieve /> crawls the web — news, blogs, forums, social, video and audio — and finds
                 exactly what people say about your company, your campaigns and your competitors.
                 Then we hand you the data.
               </p>
@@ -200,7 +201,7 @@ export default function Home() {
           <div className="md:col-span-5 md:col-start-8">
             <Reveal delay={100}>
               <p className="text-lg leading-relaxed text-ink-2">
-                One of i‑sieve’s unique features: we deliver the exact data our classifiers used —
+                One of <Sieve />’s unique features: we deliver the exact data our classifiers used —
                 usually as a spreadsheet. The comment itself, its URL, and a measure of its impact
                 we call the <strong className="font-medium text-ink">Buzz Factor</strong>. Captions for
                 text, annotated proof images for video.
@@ -306,19 +307,19 @@ export default function Home() {
           </Reveal>
           <Reveal delay={80}>
             <h2 className="display mt-6 max-w-[12ch] text-[3.2rem] leading-[0.95] md:text-[6rem] lg:text-[7.5rem]">
-              Find out which half is <em>wasted</em>.
+              Know what they’re <em>really</em> saying.
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-10 md:grid-cols-12 md:items-end">
             <Reveal delay={160} className="md:col-span-6">
               <p className="max-w-xl text-lg leading-relaxed text-paper/85 md:text-xl">
-                Send us one question about your brand, campaign or issue. Within two working days
-                you’ll have a proposal: how we’d train the system, when the first data lands, and
-                what it costs to keep listening.
+                Send us one question about your brand, campaign or issue. We’ll come back with
+                how we’d train the system for it, when the first data lands, and what it costs
+                to keep listening.
               </p>
               <ul className="mt-6 flex flex-wrap gap-x-8 gap-y-2 font-mono text-[0.72rem] uppercase tracking-[0.14em] text-paper/60">
                 <li>No obligation</li>
-                <li>Answer in 2 working days</li>
+                <li>Any language</li>
                 <li>You keep the data</li>
               </ul>
             </Reveal>
