@@ -15,7 +15,7 @@ export default function WhoWeWorkFor() {
     <>
       <PageHero
         eyebrow="Who we work for"
-        title={<>A message to convey. A brand to promote. A policy to implement. A point of view to <em>popularise</em>.</>}
+        title={<>A message to convey.<br />A brand to promote.<br />A policy to implement.<br />A point of view to <em>popularise</em>.</>}
         lede="If people are talking about it online, we can measure what they say, how it changes, and who is shaping it."
       />
 
